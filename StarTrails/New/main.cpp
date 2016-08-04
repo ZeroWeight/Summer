@@ -1,6 +1,7 @@
-#include <opencv2\core\core.hpp>
-#include<opencv2\highgui\highgui.hpp>
-#include <opencv2\imgproc\imgproc.hpp>
+//#include <opencv2\core\core.hpp>
+//#include<opencv2\highgui\highgui.hpp>
+//#include <opencv2\imgproc\imgproc.hpp>
+#include <opencv2/opencv.hpp>
 #include<iostream>
 #include<stdio.h>
 #define scalar 100
@@ -16,6 +17,7 @@ int main() {
 	cv::Mat OutGray;
 	i++;
 	while (i < all) {
+		std::cout << i << std::endl;
 		cv::cvtColor(output, OutGray, CV_BGR2GRAY);
 		sprintf(s, "Startrails/%03d.jpg", i);
 		i++;
